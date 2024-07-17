@@ -1,0 +1,2 @@
+#define MY_PWM_FREQUENCY  20000
+#define ctrl_FREQUENTCY_DIV  1

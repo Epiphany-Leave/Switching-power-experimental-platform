@@ -1,0 +1,73 @@
+T600C 000:005.094   SEGGER J-Link V7.50a Log File
+T600C 000:005.227   DLL Compiled: Jul  8 2021 18:16:52
+T600C 000:005.232   Logging started @ 2024-04-18 11:54
+T600C 000:005.236 - 5.239ms
+T600C 000:005.244 JLINK_SetWarnOutHandler(...)
+T600C 000:005.250 - 0.007ms
+T600C 000:005.255 JLINK_OpenEx(...)
+T600C 000:006.376   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T600C 000:006.620   Firmware: J-Link V9 compiled May  7 2021 16:26:12
+T600C 000:006.742   Decompressing FW timestamp took 100 us
+T600C 000:012.603   Hardware: V9.70
+T600C 000:012.620   S/N: 59768869
+T600C 000:012.628   OEM: SEGGER
+T600C 000:012.636   Feature(s): RDI, GDB, FlashDL, FlashBP, JFlash
+T600C 000:013.441   TELNET listener socket opened on port 19021
+T600C 000:013.511   WEBSRV Starting webserver
+T600C 000:013.619   WEBSRV Webserver running on local port 19080
+T600C 000:013.627 - 8.374ms returns "O.K."
+T600C 000:013.640 JLINK_GetEmuCaps()
+T600C 000:013.647 - 0.010ms returns 0xB9FF7BBF
+T600C 000:013.658 JLINK_TIF_GetAvailable(...)
+T600C 000:013.786 - 0.134ms
+T600C 000:013.800 JLINK_SetErrorOutHandler(...)
+T600C 000:013.805 - 0.007ms
+T600C 000:013.823 JLINK_ExecCommand("ProjectFile = "D:\Power\ELAB_project\BUCK\BUCK\project\JLinkSettings.ini"", ...). 
+T600C 000:020.074   Ref file found at: D:\keil5\Keil5 MDK\ARM\Segger\JLinkDevices.ref
+T600C 000:020.134   XML referenced by ref file: D:\keil5\JLink\JLinkDevices.xml
+T600C 000:020.655   D:\keil5\JLink\JLinkDevices.xml evaluated successfully.
+T600C 000:027.801 - 13.985ms returns 0x00
+T600C 000:030.443 JLINK_ExecCommand("Device = STM32F334R6", ...). 
+T600C 000:032.746   Device "STM32F334R6" selected.
+T600C 000:033.099 - 2.644ms returns 0x00
+T600C 000:033.110 JLINK_ExecCommand("DisableConnectionTimeout", ...). 
+T600C 000:033.118 - 0.003ms returns 0x01
+T600C 000:033.124 JLINK_GetHardwareVersion()
+T600C 000:033.129 - 0.007ms returns 97000
+T600C 000:033.135 JLINK_GetDLLVersion()
+T600C 000:033.142 - 0.009ms returns 75001
+T600C 000:033.147 JLINK_GetOEMString(...)
+T600C 000:033.154 JLINK_GetFirmwareString(...)
+T600C 000:033.159 - 0.006ms
+T600C 000:039.099 JLINK_GetDLLVersion()
+T600C 000:039.108 - 0.011ms returns 75001
+T600C 000:039.114 JLINK_GetCompileDateTime()
+T600C 000:039.119 - 0.006ms
+T600C 000:041.728 JLINK_GetFirmwareString(...)
+T600C 000:041.737 - 0.011ms
+T600C 000:043.676 JLINK_GetHardwareVersion()
+T600C 000:043.684 - 0.010ms returns 97000
+T600C 000:045.624 JLINK_GetSN()
+T600C 000:045.633 - 0.011ms returns 59768869
+T600C 000:048.009 JLINK_GetOEMString(...)
+T600C 000:051.947 JLINK_TIF_Select(JLINKARM_TIF_JTAG)
+T600C 000:052.532 - 0.592ms returns 0x00
+T600C 000:052.546 JLINK_HasError()
+T600C 000:052.559 JLINK_SetSpeed(5000)
+T600C 000:052.627 - 0.071ms
+T600C 000:052.636 JLINK_GetIdData(pIdData)
+T600C 000:055.183   InitTarget() start
+T600C 000:055.196    J-Link Script File: Executing InitTarget()
+T600C 000:060.818   Can not attach to CPU. Trying connect under reset.
+T600C 000:116.909   Connecting to CPU via connect under reset failed.
+T600C 000:169.992   InitTarget() end
+T600C 000:233.698   InitTarget() start
+T600C 000:233.722    J-Link Script File: Executing InitTarget()
+T600C 000:239.479   Can not attach to CPU. Trying connect under reset.
+T600C 000:295.830   Connecting to CPU via connect under reset failed.
+T600C 000:349.357   InitTarget() end
+T600C 000:349.377 - 296.743ms
+T600C 001:719.729 JLINK_Close()
+T600C 001:727.431 - 7.715ms
+T600C 001:727.448   
+T600C 001:727.453   Closed
