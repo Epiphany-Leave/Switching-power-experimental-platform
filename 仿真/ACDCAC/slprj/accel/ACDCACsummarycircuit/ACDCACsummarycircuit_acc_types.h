@@ -1,0 +1,8 @@
+#ifndef RTW_HEADER_ACDCACsummarycircuit_acc_types_h_
+#define RTW_HEADER_ACDCACsummarycircuit_acc_types_h_
+typedef struct P_PR_ACDCACsummarycircuit_T_ P_PR_ACDCACsummarycircuit_T ;
+typedef struct P_RMS_ACDCACsummarycircuit_T_ P_RMS_ACDCACsummarycircuit_T ;
+typedef struct P_TrueRMS_ACDCACsummarycircuit_T_
+P_TrueRMS_ACDCACsummarycircuit_T ; typedef struct P_ACDCACsummarycircuit_T_
+P_ACDCACsummarycircuit_T ;
+#endif
