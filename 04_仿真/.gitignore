@@ -1,0 +1,9 @@
+# Generated Simulink artifacts; retain model sources and custom S-functions.
+slprj/
+*.slxc
+*_ert_rtw/
+*_grt_rtw/
+*_acc.mexw64
+*_acc.exp
+*_acc.lib
+/99_本地生成文件/

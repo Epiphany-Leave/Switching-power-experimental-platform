@@ -1,0 +1,8 @@
+# Preserve original source bytes, including line endings and legacy encodings.
+*.slx -text
+*.mdl -text
+*.m -text
+*.mlx -text
+*.psimsch -text
+*.r20* -text
+*.autosave -text
