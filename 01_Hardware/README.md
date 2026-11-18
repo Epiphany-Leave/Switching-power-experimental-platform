@@ -11,6 +11,7 @@ Import the archives into EasyEDA Pro to view schematics and PCB layouts. The C20
 | [开关电源实验平台](ProProject_开关电源实验平台_2024-07-17.epro) · [原理图压缩包](开关电源实验平台原理图.zip) | 原平台的 STM32F334 控制板、双向 DC-DC 和三相变换电路 / Original STM32F334 platform, bidirectional DC-DC and three-phase conversion |
 | [DSP C2000](DSP_C2000.epro2) | 含 F280 系列器件的 C2000 工程，归档含 4 个板卡记录 / C2000 design with F280-series devices and four board records |
 | [IPT60R028G7 半桥模块](IPT60R028G7半桥模块.epro) | IPT60R028G7 MOSFET 半桥板 / MOSFET half-bridge board |
+| [级联多电平](级联多电平.epro) | 级联 H 桥驱动，含原理图和 PCB / Cascaded H-bridge driver with schematic and PCB layout |
 | [XDS110 高速隔离版](XDS110_高速隔离版.epro) | XDS110 调试器的隔离设计，器件库含 ISO7731 和 ISO7741 / Isolated XDS110 debug-probe design |
 | [差分采样](差分采样.epro) | 差分交流电压、电流采样、电压采样三个子板 / Differential AC voltage, current sensing and voltage sensing |
 | [辅助电源](辅助电源.epro) | SY8401、平面变压器氮化镓电源和 LM5164 子板 / SY8401, planar-transformer GaN supply and LM5164 boards |
