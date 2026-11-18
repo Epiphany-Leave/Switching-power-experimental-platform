@@ -1,4 +1,4 @@
-function [sys,x0,str,ts,simStateCompliance] = plant(t,x,u,flag,pa)
+function [sys,x0,str,ts,simStateCompliance] = ctrl(t,x,u,flag,pa)
 %SFUNTMPL General MATLAB S-Function Template
 %   With MATLAB S-functions, you can define you own ordinary differential
 %   equations (ODEs), discrete system equations, and/or just about
