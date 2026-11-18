@@ -11,9 +11,9 @@
 
 ## 导入与依赖 / Import and dependencies
 
-在 CCS 中使用 **Import CCS Projects** 选择上述两个工程目录。项目内保留了工程描述文件、链接脚本和调试器目标配置。构建前核对目标芯片、编译器版本和本机 SDK。
+在 CCS 中使用 **Import CCS Projects** 选择各工程目录。项目内保留了工程描述文件、链接脚本和调试器目标配置。构建前核对目标芯片、编译器版本和本机 SDK。
 
-Use **Import CCS Projects** for the two CCS project folders. The project descriptors, linker scripts, and debugger targets are included. Match the target and tools before building.
+Use **Import CCS Projects** for each CCS project folder. Project descriptors, linker scripts, and debugger targets are included where supplied. Match the target and tools before building.
 
 - `F280049_PRJ` 原工程使用 TI C2000 编译器 **22.6.2.LTS**，由 `LIB/` 提供 HRPWM 所需的 SFO V8 库。 / The original project uses compiler **22.6.2.LTS** and the SFO V8 library in `LIB/`.
 - `cla_lp_f28004x` 原工程使用编译器 **22.6.1.LTS**、**C2000Ware 5.03.00.00** 和 **SysConfig 1.21.0**。工程链接 SDK 中的 `driverlib/f28004x/driverlib/ccs/Debug/driverlib.lib`。在 CCS 注册 C2000Ware 后检查链接是否解析。 / Register the matching C2000Ware product in CCS and check that the linked SDK library resolves. [C2000Ware](https://www.ti.com/tool/C2000WARE) · [LaunchPad](https://www.ti.com/tool/LAUNCHXL-F280049C)
@@ -30,3 +30,13 @@ Both projects imported into CCS 12.8.1. The installed compiler, 22.6.1.LTS, prod
 TI 示例、设备支持代码和 DriverLib 保留各文件的版权与许可。随工程分发的 SFO V8 二进制库受 TI 的许可约束，许可与使用限制随接口头文件提供。 [SFO V8 license notice](F280049_PRJ/LIB/SFO_V8.h)
 
 TI examples, device support code, and DriverLib retain their original notices. The SFO V8 binary is governed by TI's terms supplied in its interface header. [SFO V8 license notice](F280049_PRJ/LIB/SFO_V8.h)
+
+## XC-F280049C 通用外设参考 / Peripheral reference
+
+[XC-F280049C_Peripheral_Examples](XC-F280049C_Peripheral_Examples/) 包含八个独立的通用外设工程，用于学习 LED、按键、SCI、RS485、CAN、I2C、SPI 网络和 FSI 的配置与通信。
+
+The eight projects cover LED, key input, SCI, RS485, CAN, I2C, SPI networking and FSI as general peripheral references.
+
+原配置使用 C2000 编译器 22.6.1.LTS 和 C2000Ware 5.02.00.00，部分工程使用 SysConfig 1.19.0。SCI、RS485、CAN 和 FSI 工程链接 SDK 的 DriverLib；I2C 工程引用 SDK 设备头文件。导入后检查 SDK 和目标板配置。
+
+The original configurations use C2000 compiler 22.6.1.LTS and C2000Ware 5.02.00.00; some also use SysConfig 1.19.0. SCI, RS485, CAN and FSI link the SDK DriverLib, while I2C references SDK device headers. Check the SDK and target board settings after import. These examples have not been built or tested on hardware here.

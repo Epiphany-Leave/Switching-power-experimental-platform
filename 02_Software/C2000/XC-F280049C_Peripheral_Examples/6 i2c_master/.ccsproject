@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVariant value="0:Eclipse-based"/>
+	<ccsVersion value="12.6.0"/>
+	<deviceVariant value="TMS320C28XX.TMS320F280049C"/>
+	<deviceFamily value="C2000"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="22.6.1.LTS"/>
+	<isElfFormat value="false"/>
+	<rts value="libc.a"/>
+	<createSlaveProjects value=""/>
+	<templateProperties value="id=i2c_ex1_master.projectspec.i2c_ex1_master"/>
+	<origin value="C:\ti\c2000\C2000Ware_5_02_00_00\device_support\f28004x\examples\i2c\CCS\i2c_ex1_master.projectspec"/>
+	<filesToOpen value=""/>
+</projectOptions>
