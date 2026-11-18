@@ -2,9 +2,9 @@
 
 [中文首页](../README.md) · [English overview](../README.en.md)
 
-共 **71 个当前模型（70 SLX + 1 MDL）**，另保留参数/分析脚本、PSIM 文件与 7 个历史/自动保存版本。模型二进制内容未修改。
+共 **81 个模型（80 SLX + 1 MDL）**，另含参数脚本、分析脚本和 PSIM 原理图。
 
-**71 current models (70 SLX + 1 MDL)**, plus scripts, a PSIM schematic and 7 historical/autosave files. Model contents are preserved byte for byte.
+**81 models (80 SLX + 1 MDL)**, plus parameter and analysis scripts and a PSIM schematic.
 
 ## 分类原则 / Classification
 
@@ -14,22 +14,21 @@ Complete applications take priority. Generic converters are classified by their 
 
 | 目录 / Folder | 当前模型 / Models | 内容 / Scope |
 | --- | ---: | --- |
-| [01_DC-DC](01_DC-DC) | 14 | Buck、交错 Boost、LLC、谐振双有源桥、超级电容及耦合隔离 / DC-DC power stages |
-| [02_AC-DC](02_AC-DC) | 32 | PFC、PWM/CSR、Vienna/NPC、CHB、MMC及带隔离输出的整流 / Rectification and PFC |
-| [03_DC-AC](03_DC-AC) | 10 | 单相、三相、多桥臂与含 SOGI-PLL 的逆变实验 / Inverter experiments |
+| [01_DC-DC](01_DC-DC) | 15 | Buck、交错 Boost、飞跨电容 Buck-Boost、LLC、谐振双有源桥与超级电容 / DC-DC power stages |
+| [02_AC-DC](02_AC-DC) | 36 | PFC、PWM/CSR、Vienna/NPC、CHB、MMC及带隔离输出的整流 / Rectification and PFC |
+| [03_DC-AC](03_DC-AC) | 13 | 单相、三相、多桥臂逆变、谐振驱动与 SOGI-PLL 实验 / Inverter experiments |
 | [04_AC-DC-AC](04_AC-DC-AC) | 1 | 完整交直交变换链 / Complete AC-DC-AC chain |
 | [05_UPS](05_UPS) | 2 | 不间断电源系统 / UPS systems |
-| [06_电网控制](06_%E7%94%B5%E7%BD%91%E6%8E%A7%E5%88%B6) | 4 | VSG 与交流下垂控制系统 / VSG and AC droop systems |
-| [07_电机驱动](07_%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8) | 1 | PMSM 磁场定向控制 / PMSM field-oriented control |
+| [06_电网控制](06_%E7%94%B5%E7%BD%91%E6%8E%A7%E5%88%B6) | 5 | VSG 与交流下垂控制系统 / VSG and AC droop systems |
+| [07_电机驱动](07_%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8) | 2 | PMSM 磁场定向控制与单相异步电机 / PMSM field-oriented control and single-phase induction motors |
 | [08_电能质量与负载](08_%E7%94%B5%E8%83%BD%E8%B4%A8%E9%87%8F%E4%B8%8E%E8%B4%9F%E8%BD%BD) | 2 | 有源滤波与交流电子负载 / APF and AC electronic load |
 | [09_控制与信号处理](09_%E6%8E%A7%E5%88%B6%E4%B8%8E%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86) | 3 | 独立 DPWM、Sigma-Delta ADC、非线性 S-Function 实验 / Standalone control and signal processing |
 | [10_建模与计算](10_%E5%BB%BA%E6%A8%A1%E4%B8%8E%E8%AE%A1%E7%AE%97) | — | 三个 MATLAB Live Script / Three MATLAB Live Scripts |
 | [11_并网交直流接口](11_%E5%B9%B6%E7%BD%91%E4%BA%A4%E7%9B%B4%E6%B5%81%E6%8E%A5%E5%8F%A3) | 2 | CSI 与 TNPC 并网接口；功率方向待核验 / Grid-connected interfaces; power direction unverified |
-| [90_历史版本](90_%E5%8E%86%E5%8F%B2%E7%89%88%E6%9C%AC) | — | 六个旧版本模型与一个自动保存文件 / Six model backups and one autosave |
 
 ## 打开前 / Before opening
 
-- 从下方进入模型所在文件夹，将该文件夹设为 MATLAB 当前目录；按模型需要加载同目录参数脚本。不要把全部子文件夹同时加入搜索路径，部分历史版本或不同实验具有同名模型。
+- 从下方进入模型所在文件夹，将该文件夹设为 MATLAB 当前目录；按模型需要加载同目录参数脚本。部分实验有同名模型，请从各自目录打开。模型索引中的 `keli/` 指来源目录，同名变体放在各自类别的 `keli/` 子目录。
 - 保存版本来自文件元数据，分布在 R2016a–R2024b，不代表已经验证兼容性。`dpwm.slx` 与 `PMSM_FOC.slx` 保存于 R2024b；较低版本 MATLAB 可能无法直接打开。
 - 多数功率模型使用 Specialized Power Systems 的 `powerlib` / `sps_*` 库，需具有对应组件的 MATLAB/Simulink 环境。计算脚本使用的 `tf`、`bode` 等还需要 Control System Toolbox；PSIM 文件需要相应软件。
 - `SD_ADC.slx` 引用了外部 `SDtoolbox/Power Spectral Density`，本仓库不含该工具箱。
@@ -38,9 +37,9 @@ Complete applications take priority. Generic converters are classified by their 
 
 Open a model from its own folder and load the required local parameter scripts. Avoid adding every folder to the MATLAB path: some models share names. Saved releases are metadata, not compatibility guarantees. Most power models require the matching Specialized Power Systems libraries; analysis scripts may require Control System Toolbox, and the PSIM schematic needs PSIM. `SD_ADC.slx` requires the external SDtoolbox. The original S-Function experiment has missing/mismatched controller files and incomplete inputs; retained scripts do not make it runnable. The SOGI-PLL inverter has its own initialization and a 100 Hz AC-source / 50 Hz PLL setting that needs review.
 
-本次完成静态结构、文件完整性与路径检查，未运行模型或验证控制性能。缓存、加速编译文件和生成代码仅在本地 `99_本地生成文件` 保留，不随仓库发布。历史源文件保存在 `90_历史版本`，不冒充当前模型。
+仓库跟踪仿真源文件及配套脚本。缓存、自动保存、跨版本备份和生成目录由本目录的 [`.gitignore`](.gitignore) 忽略。新增模型已检查静态结构，仿真结果待运行验证。
 
-Static structure, integrity and paths were checked; simulations and control performance were not validated. Generated caches and build products remain in the local archive only. Historical source files are kept separately.
+The repository tracks simulation sources and supporting scripts. The local [`.gitignore`](.gitignore) excludes caches, autosaves, compatibility backups, and generated build files. The added models were inspected statically. Simulation results still need runtime verification.
 
 ## 模型清单 / Model index
 
@@ -66,6 +65,7 @@ The release shown is the saved-file release. Original paths provide provenance; 
 | [Dual3LevelBoost2.slx](01_DC-DC/%E4%BA%A4%E9%94%99%E4%B8%89%E7%94%B5%E5%B9%B3Boost/Dual3LevelBoost2.slx) | R2023b | `ThreeP/Dual3LevelBoost2.slx`；与 Dual3LevelBoost 内容完全相同；保留原文件 / Byte-identical variant retained |
 | [SRCDAB.slx](01_DC-DC/%E8%B0%90%E6%8C%AF%E5%8F%8C%E6%9C%89%E6%BA%90%E6%A1%A5/SRCDAB.slx) | R2023b | `SRCDAB.slx` |
 | [chaodianRM.slx](01_DC-DC/%E8%B6%85%E7%BA%A7%E7%94%B5%E5%AE%B9/chaodianRM.slx) | R2021b | `chaodian/chaodianRM.slx` |
+| [FCbuck_boost.slx](01_DC-DC/%E9%A3%9E%E8%B7%A8%E7%94%B5%E5%AE%B9Buck-Boost/FCbuck_boost.slx) | R2023b | `keli/电容飞跨三电平反相buckboost/FCbuck-boost.slx`，飞跨电容三电平反相 Buck-Boost / Flying-capacitor three-level inverting buck-boost |
 
 ### 02_AC-DC
 
@@ -103,6 +103,10 @@ The release shown is the saved-file release. Original paths provide provenance; 
 | [CHBwithLLC.slx](02_AC-DC/%E7%BA%A7%E8%81%94%E6%95%B4%E6%B5%81%E4%B8%8E%E9%9A%94%E7%A6%BB%E8%BE%93%E5%87%BA/CHBwithLLC.slx) | R2023b | `CHBwithLLC.slx`；CHB 整流后接隔离级 / CHB rectifier with isolated output stage |
 | [DPWMA17levelRECT.slx](02_AC-DC/%E7%BA%A7%E8%81%94%E6%95%B4%E6%B5%81%E4%B8%8E%E9%9A%94%E7%A6%BB%E8%BE%93%E5%87%BA/DPWMA17levelRECT.slx) | R2021b | `DPWM/DPWMA17levelRECT.slx`；包含整流功率级，非独立 DPWM / Includes rectifier power stage |
 | [rec4.slx](02_AC-DC/%E7%BA%A7%E8%81%94%E6%95%B4%E6%B5%81%E4%B8%8E%E9%9A%94%E7%A6%BB%E8%BE%93%E5%87%BA/rec4.slx) | R2021b | `rec4.slx`；交流输入、隔离级与直流输出 / AC input, isolated stages, DC output |
+| [MMCRect21Level.slx (keli)](02_AC-DC/MMC/keli/MMCRect21Level.slx) | R2023b | `keli/25kV混合式MMC多电平/MMCRect21Level.slx`，混合式 MMC 整流变体 / Hybrid MMC rectifier variant |
+| [REC1.slx](02_AC-DC/PWM%E6%95%B4%E6%B5%81/REC1.slx) | R2023b | `keli/REC1.slx`，单相 PWM 整流，含 PFC 和 PR 控制 / Single-phase PWM rectifier with PFC and PR control |
+| [DPWMA17levelRECT.slx (keli)](02_AC-DC/%E7%BA%A7%E8%81%94%E6%95%B4%E6%B5%81%E4%B8%8E%E9%9A%94%E7%A6%BB%E8%BE%93%E5%87%BA/keli/DPWMA17levelRECT.slx) | R2023b | `keli/三相10kVdpwm-a 17电平SST/DPWMA17levelRECT (1).slx`，三相 17 电平 SST 整流变体 / Three-phase 17-level SST rectifier variant |
+| [FCNPC1PH.slx (keli)](02_AC-DC/Vienna%E4%B8%8ENPC/keli/FCNPC1PH.slx) | R2023b | `keli/飞跨电容维也纳/FCNPC1PH.slx`，单相 FCNPC 整流变体 / Single-phase FCNPC rectifier variant |
 
 ### 03_DC-AC
 
@@ -118,6 +122,9 @@ The release shown is the saved-file release. Original paths provide provenance; 
 | [INVT.slx](03_DC-AC/%E5%8D%95%E7%9B%B8%E9%80%86%E5%8F%98/INVT.slx) | R2023b | `INVT.slx` |
 | [Vienna_Inv1ph.slx](03_DC-AC/%E5%8D%95%E7%9B%B8%E9%80%86%E5%8F%98/Vienna_Inv1ph.slx) | R2023b | `PWMReact/Vienna_Inv1ph.slx` |
 | [invslx.slx](03_DC-AC/%E5%8D%95%E7%9B%B8%E9%80%86%E5%8F%98/invslx.slx) | R2021a | `SD_ADC/invslx.slx` |
+| [TNPC3P4L.slx (keli)](03_DC-AC/%E4%B8%89%E7%9B%B8%E4%B8%8E%E5%A4%9A%E6%A1%A5%E8%87%82/keli/TNPC3P4L.slx) | R2023b | `keli/T-NPC三相四桥臂逆变器(3D-DPWMA)/TNPC3P4L .slx`，T-NPC 四桥臂逆变变体 / Four-leg T-NPC inverter variant |
+| [NLM3LFCNPC.slx](03_DC-AC/%E8%B0%90%E6%8C%AF%E9%A9%B1%E5%8A%A8/NLM3LFCNPC.slx) | R2023b | `keli/三电平倍频LC谐振驱动/NLM3LFCNPC.slx`，FCNPC 倍频三电平 LC 谐振驱动 / Three-level FCNPC LC resonant drive |
+| [Heric.slx (keli)](03_DC-AC/%E5%8D%95%E7%9B%B8%E9%80%86%E5%8F%98/keli/Heric.slx) | R2023b | `keli/单相6kW伪三电平Heric逆变器/Heric.slx`，HERIC 单相逆变变体 / Single-phase HERIC inverter variant |
 
 ### 04_AC-DC-AC
 
@@ -140,12 +147,14 @@ The release shown is the saved-file release. Original paths provide provenance; 
 | [Droopslx.slx](06_%E7%94%B5%E7%BD%91%E6%8E%A7%E5%88%B6/Droop/Droopslx.slx) | R2021a | `Droop/Droopslx.slx` |
 | [AC_VSG.slx](06_%E7%94%B5%E7%BD%91%E6%8E%A7%E5%88%B6/VSG/AC_VSG.slx) | R2023b | `VSG/AC_VSG.slx` |
 | [vsg.slx](06_%E7%94%B5%E7%BD%91%E6%8E%A7%E5%88%B6/VSG/vsg.slx) | R2023b | `VSG/vsg.slx` |
+| [AC_VSG.slx (keli)](06_%E7%94%B5%E7%BD%91%E6%8E%A7%E5%88%B6/VSG/keli/AC_VSG.slx) | R2021b | `keli/AC_VSG.slx`，并联逆变器 VSG 实验 / Parallel-inverter VSG experiment |
 
 ### 07_电机驱动
 
 | 模型 / Model | 保存版本 / Release | 原路径与说明 / Origin and notes |
 | --- | --- | --- |
 | [PMSM_FOC.slx](07_%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8/PMSM/PMSM_FOC.slx) | R2024b | `PMSM/PMSM_FOC.slx` |
+| [INVT.slx (induction motor)](07_%E7%94%B5%E6%9C%BA%E9%A9%B1%E5%8A%A8/%E5%BC%82%E6%AD%A5%E7%94%B5%E6%9C%BA/INVT.slx) | R2023b | `keli/异步电机foc/INVT.slx`，单相异步电机和两相三桥臂 DPWM / Single-phase induction motor and two-phase three-leg DPWM |
 
 ### 08_电能质量与负载
 

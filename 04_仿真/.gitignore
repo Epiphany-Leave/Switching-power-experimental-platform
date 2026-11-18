@@ -1,9 +1,15 @@
 # Generated Simulink artifacts; retain model sources and custom S-functions.
 slprj/
 *.slxc
+*.slx.autosave
+*.mdl.autosave
+*.slx.r20*
+*.mdl.r20*
+*.asv
 *_ert_rtw/
 *_grt_rtw/
-*_acc.mexw64
+*_acc.mex*
+*_acc.obj
 *_acc.exp
 *_acc.lib
 /99_本地生成文件/
