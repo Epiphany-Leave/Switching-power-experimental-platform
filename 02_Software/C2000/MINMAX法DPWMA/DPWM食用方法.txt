@@ -1,0 +1,6 @@
+
+	//DPWMA解算，输入最大峰峰值为1，输出为DPWM.OUTA/B/C，值有正有负，需要自己抬升
+	DPWM.INA=输入A;
+	DPWM.INB=输入B;
+	DPWM.INC=输入C;
+	DI_DPWMA_UPDATE(&DPWM);

@@ -1,0 +1,5 @@
+# CCS output directories
+/F280049_PRJ/RAM/
+/F280049_PRJ/FLASH/
+/cla_lp_f28004x/CPU1_RAM/
+/cla_lp_f28004x/CPU1_FLASH/
